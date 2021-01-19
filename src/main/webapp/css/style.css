@@ -1,0 +1,20 @@
+img{
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: 700px;
+}
+
+label img {
+    width : 70px;
+    height : 70px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    float : left;
+    margin : 10px;
+}
