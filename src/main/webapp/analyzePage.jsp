@@ -29,19 +29,19 @@
         function setDisplay(){
             let value = $(':radio[name="country"]:checked').val();
 
-            if(value == "1"){
+            if(value == "korea"){
                 $('#con1').css('display','block');
                 $('#con2').css('display','none');
                 $('#con3').css('display','none');
                 return false;
             }
-            if(value == "2"){
+            if(value == "america"){
                 $('#con1').css('display','none');
                 $('#con2').css('display','block');
                 $('#con3').css('display','none');
                 return false;
             }
-            if(value == "3"){
+            if(value == "japan"){
                 $('#con1').css('display','none');
                 $('#con2').css('display','none');
                 $('#con3').css('display','block');
@@ -63,9 +63,9 @@
 
     <form method="post" action="Analyze">
     <!--나라선택-->
-    <input type="radio" name="country" value="1" onchange="setDisplay()" checked="checked">한국
-    <input type="radio" name="country" value="2" onchange="setDisplay()">미국
-    <input type="radio" name="country" value="3" onchange="setDisplay()">일본
+    <input type="radio" name="country" value="korea" onchange="setDisplay()" checked="checked">한국
+    <input type="radio" name="country" value="america" onchange="setDisplay()">미국
+    <input type="radio" name="country" value="japan" onchange="setDisplay()">일본
 
     <!--나라별 세탁정보 선택화면-->
         <!--한국-->
