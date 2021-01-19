@@ -5,6 +5,13 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 
@@ -19,15 +26,27 @@ public class Analyze extends HttpServlet {
 		IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
 
-		country = request.getParameter("country");
 		waterwash = request.getParameter("cate1");
 		bleach = request.getParameter("cate2");
 		ironing = request.getParameter("cate3");
 		dry = request.getParameter("cate4");
 		drycleaning = request.getParameter("cate5");
 
-		AnalyzeDto analyzeDto = new AnalyzeDto(country, waterwash, bleach, ironing, dry, drycleaning);
+		AnalyzeDto analyzeDto = new AnalyzeDto();
+		analyzeDto.setWaterwash(waterwash);
+		analyzeDto.setBleach(bleach);
+		analyzeDto.setIroning(ironing);
+		analyzeDto.setDry(dry);
+		analyzeDto.setDrycleaning(drycleaning);
+
+		Gson gson = new Gson();
+		String resultJsonString = gson.toJson(analyzeDto);
+
+		PrintWriter out = response.getWriter();
+		out.print(resultJsonString);
+		out.flush();
 
 
 

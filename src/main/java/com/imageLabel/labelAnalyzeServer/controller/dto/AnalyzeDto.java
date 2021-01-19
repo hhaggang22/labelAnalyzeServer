@@ -1,29 +1,11 @@
 package com.imageLabel.labelAnalyzeServer.controller.dto;
 
 public class AnalyzeDto {
-	private String country;
 	private String waterwash;
 	private String bleach;
 	private String ironing;
 	private String dry;
 	private String drycleaning;
-
-	public AnalyzeDto(String country, String waterwash, String bleach, String ironing, String dry, String drycleaning){
-		this.country = country;
-		this.waterwash = waterwash;
-		this.bleach = bleach;
-		this.ironing = ironing;
-		this.dry = dry;
-		this.drycleaning = drycleaning;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
 
 	public String getWaterwash() {
 		return waterwash;
