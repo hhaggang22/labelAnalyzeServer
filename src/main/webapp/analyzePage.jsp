@@ -222,7 +222,7 @@
                     </li>
                     <li>
                         <label><input type="checkbox" class="cate4" name="cate4" value="cate4_6">비틀기불가<br>
-                            <img src="img/dry/nosqueeze.pngn">
+                            <img src="img/dry/nosqueeze.png">
                         </label>
                     </li>
                     <li>
@@ -270,124 +270,146 @@
 
         <!--미국-->
         <div class = "category_america" id="con2" style="display: none">
-            <!-- 물세탁 카테고리 -->
-            <div id="category1" class="cate">
-                <h3>1. 미국물세탁</h3>
+            <div class="cate">
+                <h3>1. 물세탁</h3>
                 <ul>
                     <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="손세탁가능">손세탁가능<br>
-                            <img src="img/waterwash/handwash.png">
+                        <label><input type="checkbox" class="cate1" name="cate1" value="cate1_1">손세탁가능<br>
+                            <img src="img/waterwash/ame_handwash.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="물세탁불가">물세탁불가<br>
-                            <img src="img/waterwash/nohandwash.png">
+                        <label><input type="checkbox" class="cate1" name="cate1" value="cate1_2">물세탁금지<br>
+                            <img src="img/waterwash/ame_no.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="세탁기_약_30도_중성">세탁기 약 30도 중성<br>
-                            <img src="img/waterwash/machine_30.png">
+                        <label><input type="checkbox" class="cate1" name="cate1" value="cate1_3">기계세탁가능<br>
+                            <img src="img/waterwash/ame_mac.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="세탁기_약_40도">세탁기 약 40<br>
-                            <img src="img/waterwash/machine_40.png">
+                        <label><input type="checkbox" class="cate1" name="cate1" value="cate1_4">비틀기 금지<br>
+                            <img src="img/waterwash/ame_nosqueeze.png">
                         </label>
                     </li>
-                    <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="세탁기_40도">세탁기 40도<br>
-                            <img src="img/waterwash/machine40.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="세탁기_60도">세탁기 60도<br>
-                            <img src="img/waterwash/machine60.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate1" name="cate1" value="세탁기_95도">세탁기 95도<br>
-                            <img src="img/waterwash/machine95.png">
-                        </label>
-                    </li>
+
                 </ul>
             </div>
 
             <!-- 표백 카테고리 -->
-            <div id="category2" class="cate">
+            <div class="cate">
                 <h3>2. 표백</h3>
                 <ul>
                     <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="염소_산소_표백 불가">염소, 산소, 표백 불가<br>
-                            <img src="img/bleach/allno.png">
+                        <label><input type="checkbox" class="cate2" name="cate2" value="cate2_1">어떤 표백제도 불가<br>
+                            <img src="img/bleach/ame_no.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="산소_표백_불가">산소, 표백 불가<br>
-                            <img src="img/bleach/spno.png">
+                        <label><input type="checkbox" class="cate2" name="cate2" value="cate2_2">비염소제와 색상보호 표백제만 가능<br>
+                            <img src="img/bleach/ame_half.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="염소_표백_불가">염소, 표백 불가<br>
-                            <img src="img/bleach/ypno.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="염소_산소_표백_가능">염소, 산소, 표백 가능<br>
-                            <img src="img/bleach/ysp.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="산소_표백_가능">산소, 표백 가능<br>
-                            <img src="img/bleach/sp.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="염소_표백_가능">염소, 표백 가능<br>
-                            <img src="img/bleach/yp.png">
+                        <label><input type="checkbox" class="cate2" name="cate2" value="cate2_3">모든 표백제 가능<br>
+                            <img src="img/bleach/ame_allbleach.png">
                         </label>
                     </li>
 
                 </ul>
             </div>
             <!-- 다림질 카테고리 -->
-            <div id="category3" class="cate">
+            <div class="cate">
                 <h3>3. 다림질</h3>
                 <ul>
                     <li>
-                        <label><input type="checkbox" class="cate3" name="cate3" value="염소_산소_표백 불가">염소, 산소, 표백 불가<br>
-                            <img src="img/bleach/allno.png">
+                        <label><input type="checkbox" class="cate3" name="cate3" value="cate3_1">다림질불가<br>
+                            <img src="img/ironing/ame_no.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate3" name="cate3" value="산소_표백_불가">산소, 표백 불가<br>
-                            <img src="img/bleach/spno.png">
+                        <label><input type="checkbox" class="cate3" name="cate3" value="cate3_2">스팀다리미불가<br>
+                            <img src="img/ironing/ame_steamno.png">
                         </label>
                     </li>
                     <li>
-                        <label><input type="checkbox" class="cate3" name="cate3" value="염소_표백_불가">염소, 표백 불가<br>
-                            <img src="img/bleach/ypno.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate3" name="cate3" value="염소_산소_표백_가능">염소, 산소, 표백 가능<br>
-                            <img src="img/bleach/ysp.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate3" name="cate3" value="산소_표백_가능">산소, 표백 가능<br>
-                            <img src="img/bleach/sp.png">
-                        </label>
-                    </li>
-                    <li>
-                        <label><input type="checkbox" class="cate2" name="cate2" value="염소_표백_가능">염소, 표백 가능<br>
-                            <img src="img/bleach/yp.png">
+                        <label><input type="checkbox" class="cate3" name="cate3" value="cate3_3">스팀다리미가능<br>
+                            <img src="img/ironing/ame_steam.png">
                         </label>
                     </li>
 
                 </ul>
             </div>
             <!-- 건조 카테고리 -->
+            <div class="cate">
+                <h3>4. 건조</h3>
+                <ul>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_1">건조기 가능<br>
+                            <img src="img/dry/machine.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_2">건조기 불가<br>
+                            <img src="img/dry/ame_nomachine.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_3">젖은 채로 줄이나 막내기에 널어서 건조<br>
+                            <img src="img/dry/ame_wetroap.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_4">줄에 널어서 건조<br>
+                            <img src="img/dry/ame_roap.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_5">평평하게 펴서 건조<br>
+                            <img src="img/dry/ame_flat.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate4" name="cate4" value="cate4_6">그늘에서 건조<br>
+                            <img src="img/dry/ame_gloomy.png">
+                        </label>
+                    </li>
+
+                </ul>
+            </div>
             <!-- 드라이클리닝 카테고리 -->
+            <div class="cate">
+                <h3>5. 드라이클리닝</h3>
+                <ul>
+                    <li>
+                        <label><input type="checkbox" class="cate5" name="cate5" value="cate5_1">드라이클리닝<br>
+                            <img src="img/drycleaning/ame_drycleaning.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate5" name="cate5" value="cate5_2">드라이클리닝불가<br>
+                            <img src="img/drycleaning/ame_no.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate5" name="cate5" value="cate5_3">짧은 드라이클리닝<br>
+                            <img src="img/drycleaning/ame_short.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate5" name="cate5" value="cate5_4">낮은 습도에서 드라이클리닝<br>
+                            <img src="img/drycleaning/ame_lowmoi.png">
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" class="cate5" name="cate5" value="cate5_5">열을 줄여서 드라이클리닝<br>
+                            <img src="img/drycleaning/ame_lowheat.png">
+                        </label>
+                    </li>
+
+                </ul>
+            </div>
         </div>
         <!--일본-->
         <div class = "category_japan" id="con3" style="display: none">
