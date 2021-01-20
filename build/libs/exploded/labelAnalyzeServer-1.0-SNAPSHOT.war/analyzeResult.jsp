@@ -17,11 +17,11 @@
                 list = ${jsonResult};
 
                 for(var loop = 0; loop < list.length; loop++){
-                    console.log('code : ' + list[loop].waterwash);
-                    console.log('code : ' + list[loop].bleach);
-                    console.log('code : ' + list[loop].ironing);
-                    console.log('code : ' + list[loop].dry);
-                    console.log('code : ' + list[loop].drycleaning);
+                    console.log('waterwash : ' + list[loop].waterwash);
+                    console.log('bleach : ' + list[loop].bleach);
+                    console.log('ironing : ' + list[loop].ironing);
+                    console.log('dry : ' + list[loop].dry);
+                    console.log('drycleaning : ' + list[loop].drycleaning);
                 }
             })
         </script>
