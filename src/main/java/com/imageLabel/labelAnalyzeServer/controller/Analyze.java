@@ -2,11 +2,14 @@ package com.imageLabel.labelAnalyzeServer.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONArray;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
@@ -37,13 +40,13 @@ public class Analyze extends HttpServlet {
 		analyzeDto.setDry(dry);
 		analyzeDto.setDrycleaning(drycleaning);
 
-		String resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
+		JSONArray resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
 
-		/*request.setAttribute("jsonResult", resultJsonString);
+		request.setAttribute("jsonResult", resultJsonString);
 		RequestDispatcher view = request.getRequestDispatcher("analyzeResult.jsp");
-		view.forward(request, response);*/
+		view.forward(request, response);
 
-		System.out.println(resultJsonString);
+		//System.out.println(resultJsonString);
 
 
 	}

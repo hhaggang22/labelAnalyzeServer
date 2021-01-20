@@ -8,7 +8,7 @@ import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 
 public class AnalyzeDAO {
 
-	public static String makeResult(AnalyzeDto analyzeDto){
+	public static JSONArray makeResult(AnalyzeDto analyzeDto){
 		Gson gson = new Gson();
 		JSONArray jsonList = new JSONArray();
 		JSONObject jsonObject = new JSONObject();
@@ -21,8 +21,8 @@ public class AnalyzeDAO {
 		
 		jsonList.put(jsonObject);
 
-		String result = gson.toJson(jsonList);
+		//String result = gson.toJson(jsonList);
 
-		return result;
+		return jsonList;
 	}
 }
