@@ -1,19 +1,15 @@
 package com.imageLabel.labelAnalyzeServer.controller;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
+import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
@@ -41,13 +37,13 @@ public class Analyze extends HttpServlet {
 		analyzeDto.setDry(dry);
 		analyzeDto.setDrycleaning(drycleaning);
 
-		Gson gson = new Gson();
-		String resultJsonString = gson.toJson(analyzeDto);
+		String resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
 
-		PrintWriter out = response.getWriter();
-		out.print(resultJsonString);
-		out.flush();
+		/*request.setAttribute("jsonResult", resultJsonString);
+		RequestDispatcher view = request.getRequestDispatcher("analyzeResult.jsp");
+		view.forward(request, response);*/
 
+		System.out.println(resultJsonString);
 
 
 	}

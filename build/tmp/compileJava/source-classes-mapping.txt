@@ -1,2 +1,0 @@
-com/imageLabel/labelAnalyzeServer/Analyze.java
- com.imageLabel.labelAnalyzeServer.Analyze
