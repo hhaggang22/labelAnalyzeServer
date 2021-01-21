@@ -16,8 +16,8 @@ import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
-	private String country, waterwash, dry, ironing, drycleaning, bleach;
-
+	private String country, waterwash, dry, ironing, drycleaning, bleach, material;
+	private int percent;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
@@ -27,6 +27,8 @@ public class Analyze extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 
+		material = request.getParameter("mate");
+		percent = Integer.parseInt((request.getParameter("percent")));
 		waterwash = request.getParameter("cate1");
 		bleach = request.getParameter("cate2");
 		ironing = request.getParameter("cate3");
@@ -34,6 +36,8 @@ public class Analyze extends HttpServlet {
 		drycleaning = request.getParameter("cate5");
 
 		AnalyzeDto analyzeDto = new AnalyzeDto();
+		analyzeDto.setMaterial(material);
+		analyzeDto.setPercent(percent);
 		analyzeDto.setWaterwash(waterwash);
 		analyzeDto.setBleach(bleach);
 		analyzeDto.setIroning(ironing);

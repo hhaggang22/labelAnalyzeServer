@@ -1,11 +1,29 @@
 package com.imageLabel.labelAnalyzeServer.controller.dto;
 
 public class AnalyzeDto {
+	private String material;
+	private int percent;
 	private String waterwash;
 	private String bleach;
 	private String ironing;
 	private String dry;
 	private String drycleaning;
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public int getPercent() {
+		return percent;
+	}
+
+	public void setPercent(int percent) {
+		this.percent = percent;
+	}
 
 	public String getWaterwash() {
 		return waterwash;

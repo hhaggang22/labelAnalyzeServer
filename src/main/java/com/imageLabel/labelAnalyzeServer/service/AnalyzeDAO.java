@@ -12,7 +12,9 @@ public class AnalyzeDAO {
 		Gson gson = new Gson();
 		JSONArray jsonList = new JSONArray();
 		JSONObject jsonObject = new JSONObject();
-		
+
+		jsonObject.put("material", analyzeDto.getMaterial());
+		jsonObject.put("percent", analyzeDto.getPercent());
 		jsonObject.put("waterwash" , analyzeDto.getWaterwash());
 		jsonObject.put("bleach", analyzeDto.getBleach());
 		jsonObject.put("ironing", analyzeDto.getIroning());

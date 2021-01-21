@@ -7,6 +7,7 @@ wrapper{
 }
 .cate{
     width: 100%;
+    display: block;
 }
 img{
     width: auto;
@@ -25,7 +26,7 @@ ul{
 }
 
 li{
-    float : left;
+    display: inline-block;
     margin : 10px;
 }
 
