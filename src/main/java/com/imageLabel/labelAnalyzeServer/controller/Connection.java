@@ -13,52 +13,29 @@ import java.net.URL;
 
 import org.json.JSONObject;
 
+import com.imageLabel.labelAnalyzeServer.service.ConnectionDAO;
+
 @WebServlet(name = "Connection", value = "/Connection")
 public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String HOST_URL = "localhost:8081/image";
+	private static final String HOST_URL = "http://localhost:8082/capture/event";
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
 		ServletException,
 		IOException {
+		//request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json;charset=utf-8");
-		request.setCharacterEncoding("UTF-8");
 
-		HttpURLConnection conn = null;
-		JSONObject responseJson = null;
-
-		try{
-			URL url = new URL(HOST_URL);
-
-			conn = (HttpURLConnection)url.openConnection();
-			conn.setConnectTimeout(5000);
-			conn.setReadTimeout(5000);
-			conn.setRequestMethod("POST");
-
-			JSONObject commands = new JSONObject();
-
-			int responseCode = conn.getResponseCode();
-			if(responseCode == 400 || responseCode == 401 || responseCode == 500){
-				System.out.println(responseCode + " Error! ");
-			}else {
-				BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-				StringBuilder sb = new StringBuilder();
-				String line = "";
-				while((line = br.readLine()) != null){
-					sb.append(line);
-				}
-				responseJson = new JSONObject(sb.toString());
-				//System.out.println(responseJson);
-
-			}
-
-		}catch (Exception e){
-			System.err.println(e.toString());
-		}
+		ConnectionDAO connectionDAO = new ConnectionDAO();
+		String responseJson = connectionDAO.get(HOST_URL);
 
 		PrintWriter out = response.getWriter();
 		out.println(responseJson);
+
+		request.setAttribute("jsonresult", responseJson);
+		RequestDispatcher view = request.getRequestDispatcher("/resultPage.jsp");
+		view.forward(request, response);
 
 	}
 
