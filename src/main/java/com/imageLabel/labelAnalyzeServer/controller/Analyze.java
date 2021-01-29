@@ -14,6 +14,7 @@ import org.json.JSONArray;
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
+
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
 	private String country, waterwash, dry, ironing, drycleaning, bleach, material;
@@ -23,6 +24,7 @@ public class Analyze extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
 		ServletException,
 		IOException {
+
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
@@ -51,7 +53,6 @@ public class Analyze extends HttpServlet {
 		view.forward(request, response);
 
 		//System.out.println(resultJsonString);
-
 
 	}
 
