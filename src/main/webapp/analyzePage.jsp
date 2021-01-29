@@ -58,7 +58,7 @@
     <div class = "imageSelect">
         <h2> 이미지를 업로드하고 해당 라벨에 있는 정보를 입력하세요. </h2>
         <!--<input type="file" id="image" accept="image/*" onchange="setImage(event);"/>-->
-        <img src="http://localhost:8081/image/5e6e5dc3-6c2a-4bf9-b4de-d3c3012a5000"/>
+        <img src="http://localhost:8081/image/0dff6e29-572f-4d09-9108-cb0e55d65f5b"/>
     </div>
 
     <form method="post" action="Analyze">
