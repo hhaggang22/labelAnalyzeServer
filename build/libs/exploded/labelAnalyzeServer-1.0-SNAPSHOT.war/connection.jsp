@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 </head>
 <body>
-<form method="get" action="Connection">
+<form method="post" action="Connection">
     <button type="submit" id="request_button">확인</button>
 </form>
 </body>

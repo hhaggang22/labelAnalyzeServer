@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
@@ -17,8 +18,8 @@ import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
-	private String country, waterwash, dry, ironing, drycleaning, bleach, material;
-	private int percent;
+	private String[] material,percent;
+	private String waterwash, dry, ironing, drycleaning, bleach;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
@@ -29,24 +30,26 @@ public class Analyze extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 
-		material = request.getParameter("mate");
-		percent = Integer.parseInt((request.getParameter("percent")));
-		waterwash = request.getParameter("cate1");
-		bleach = request.getParameter("cate2");
-		ironing = request.getParameter("cate3");
-		dry = request.getParameter("cate4");
-		drycleaning = request.getParameter("cate5");
+		material = request.getParameterValues("material");
+		percent = request.getParameterValues("percent");
+		waterwash = request.getParameter("waterwash");
+		bleach = request.getParameter("bleach");
+		ironing = request.getParameter("ironing");
+		dry = request.getParameter("dry");
+		drycleaning = request.getParameter("drycleaning");
 
 		AnalyzeDto analyzeDto = new AnalyzeDto();
-		analyzeDto.setMaterial(material);
-		analyzeDto.setPercent(percent);
+		for(int i =0; i<material.length; i++){
+			analyzeDto.setMaterial(material);
+			analyzeDto.setPercent(percent);
+		}
 		analyzeDto.setWaterwash(waterwash);
 		analyzeDto.setBleach(bleach);
 		analyzeDto.setIroning(ironing);
 		analyzeDto.setDry(dry);
 		analyzeDto.setDrycleaning(drycleaning);
 
-		JSONArray resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
+		JSONObject resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
 
 		request.setAttribute("jsonResult", resultJsonString);
 		RequestDispatcher view = request.getRequestDispatcher("analyzeResult.jsp");

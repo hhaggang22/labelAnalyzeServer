@@ -12,20 +12,10 @@
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     </head>
     <body>
-        <script>
-            $(document).ready(function (){
-                list = ${jsonResult};
 
-                for(var loop = 0; loop < list.length; loop++){
-                    console.log('waterwash : ' + list[loop].waterwash);
-                    console.log('bleach : ' + list[loop].bleach);
-                    console.log('ironing : ' + list[loop].ironing);
-                    console.log('dry : ' + list[loop].dry);
-                    console.log('drycleaning : ' + list[loop].drycleaning);
-                }
-            })
-        </script>
-
+    <div>
+        <%= request.getAttribute("jsonResult")%>
+    </div>
 
     </body>
 </html>
