@@ -1,8 +1,11 @@
 package com.imageLabel.labelAnalyzeServer.service;
 
+import org.json.JSONObject;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class ConnectionDAO {
 	String message = "";
@@ -16,8 +19,10 @@ public class ConnectionDAO {
 
 			Response response = client.newCall(request).execute();
 
+			//JSONObject jsonObject = new JSONObject(response.body().toString());
+
 			message = response.body().string();
-			System.out.println(message);
+
 
 		}catch (Exception e){
 			System.err.println(e.toString());

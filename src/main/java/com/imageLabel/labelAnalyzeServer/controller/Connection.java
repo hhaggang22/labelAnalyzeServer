@@ -27,8 +27,6 @@ public class Connection extends HttpServlet {
 		ConnectionDAO connectionDAO = new ConnectionDAO();
 		String responseJson = connectionDAO.get(HOST_URL);
 
-		PrintWriter out = response.getWriter();
-		out.println(responseJson);
 
 		request.setAttribute("jsonresult", responseJson);
 		RequestDispatcher view = request.getRequestDispatcher("/resultPage.jsp");
