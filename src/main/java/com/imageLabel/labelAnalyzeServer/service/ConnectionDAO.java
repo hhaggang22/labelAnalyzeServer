@@ -1,5 +1,6 @@
 package com.imageLabel.labelAnalyzeServer.service;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
@@ -8,9 +9,10 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 public class ConnectionDAO {
-	String message = "";
+	JSONArray resultArray;
+	JSONArray imageIDArray;
 
-	public String get(String requestURL){
+	public JSONArray get(String requestURL){
 		try{
 			OkHttpClient client = new OkHttpClient();
 			Request request = new Request.Builder()
@@ -18,15 +20,22 @@ public class ConnectionDAO {
 				.build();
 
 			Response response = client.newCall(request).execute();
+			JSONArray jsonArray= new JSONArray(response.body().string());
 
-			//JSONObject jsonObject = new JSONObject(response.body().toString());
+			resultArray = new JSONArray();
+			imageIDArray = new JSONArray();
 
-			message = response.body().string();
-
+			int count = jsonArray.length();
+			for(int i = 0; i < count; i++){
+				JSONObject jsonObject = jsonArray.getJSONObject(i);
+				if(jsonObject.get("status").equals("START")){
+					resultArray.put(jsonObject);
+				}
+			}
 
 		}catch (Exception e){
 			System.err.println(e.toString());
 		}
-		return message;
+		return resultArray;
 	}
 }

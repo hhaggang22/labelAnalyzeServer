@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+
 import com.imageLabel.labelAnalyzeServer.service.ConnectionDAO;
 
 @WebServlet(name = "Connection", value = "/Connection")
@@ -25,7 +27,7 @@ public class Connection extends HttpServlet {
 		response.setContentType("application/json;charset=utf-8");
 
 		ConnectionDAO connectionDAO = new ConnectionDAO();
-		String responseJson = connectionDAO.get(HOST_URL);
+		JSONArray responseJson = connectionDAO.get(HOST_URL);
 
 
 		request.setAttribute("jsonresult", responseJson);
