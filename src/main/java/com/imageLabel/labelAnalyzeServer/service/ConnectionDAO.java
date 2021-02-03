@@ -25,8 +25,9 @@ public class ConnectionDAO {
 
 			resultArray = new JSONArray();
 			imageIDArray = new JSONArray();
-			
+
 			int count = jsonArray.length();
+
 			for(int i = 0; i < count; i++){
 				imageIDObject = new JSONObject();
 				JSONObject jsonObject = jsonArray.getJSONObject(i);

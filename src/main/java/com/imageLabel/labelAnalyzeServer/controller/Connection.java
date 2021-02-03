@@ -30,8 +30,8 @@ public class Connection extends HttpServlet {
 		JSONArray responseJson = connectionDAO.get(HOST_URL);
 
 
-		request.setAttribute("jsonresult", responseJson);
-		RequestDispatcher view = request.getRequestDispatcher("/resultPage.jsp");
+		request.setAttribute("jsonResult", responseJson);
+		RequestDispatcher view = request.getRequestDispatcher("/ImageRendering");
 		view.forward(request, response);
 
 	}

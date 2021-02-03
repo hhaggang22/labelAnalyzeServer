@@ -13,7 +13,7 @@
 <body>
 
     <div>
-        <%= request.getAttribute("jsonresult")%>
+        <%= request.getAttribute("jsonResult")%>
     </div>
 
 </body>
