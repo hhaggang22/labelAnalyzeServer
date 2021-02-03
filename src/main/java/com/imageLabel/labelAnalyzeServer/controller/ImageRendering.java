@@ -2,6 +2,7 @@ package com.imageLabel.labelAnalyzeServer.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
+
+import com.imageLabel.labelAnalyzeServer.service.ImageRenderDAO;
 
 @WebServlet(name = "ImageRendering", value = "/ImageRendering")
 public class ImageRendering extends HttpServlet {
@@ -24,12 +27,12 @@ public class ImageRendering extends HttpServlet {
 
 		JSONArray imageArray = (JSONArray)request.getAttribute("jsonResult");
 
-		for(int i = 0; i<imageArray.length(); i++){
-			
-		}
+		ImageRenderDAO imageRenderDAO = new ImageRenderDAO();
 
+		imageRenderDAO.getImageList(imageArray);
 
-
+		RequestDispatcher view = request.getRequestDispatcher("analyzePage.jsp");
+		view.forward(request, response);
 
 	}
 
