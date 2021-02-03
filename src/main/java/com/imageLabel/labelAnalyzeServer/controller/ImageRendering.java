@@ -1,6 +1,7 @@
 package com.imageLabel.labelAnalyzeServer.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,8 +30,9 @@ public class ImageRendering extends HttpServlet {
 
 		ImageRenderDAO imageRenderDAO = new ImageRenderDAO();
 
-		imageRenderDAO.getImageList(imageArray);
+		ArrayList<String> imageArrayList = imageRenderDAO.getImageList(imageArray);
 
+		request.setAttribute("imageArray", imageArrayList);
 		RequestDispatcher view = request.getRequestDispatcher("analyzePage.jsp");
 		view.forward(request, response);
 
