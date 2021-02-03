@@ -11,6 +11,7 @@ import okhttp3.ResponseBody;
 public class ConnectionDAO {
 	JSONArray resultArray;
 	JSONArray imageIDArray;
+	JSONObject imageIDObject;
 
 	public JSONArray get(String requestURL){
 		try{
@@ -24,18 +25,21 @@ public class ConnectionDAO {
 
 			resultArray = new JSONArray();
 			imageIDArray = new JSONArray();
-
+			
 			int count = jsonArray.length();
 			for(int i = 0; i < count; i++){
+				imageIDObject = new JSONObject();
 				JSONObject jsonObject = jsonArray.getJSONObject(i);
-				if(jsonObject.get("status").equals("START")){
-					resultArray.put(jsonObject);
+
+				if(jsonObject.getString("status").equals("START")){
+					imageIDObject.put("imageId", jsonObject.getString("imageId"));
 				}
+				imageIDArray.put(imageIDObject);
 			}
 
 		}catch (Exception e){
 			System.err.println(e.toString());
 		}
-		return resultArray;
+		return imageIDArray;
 	}
 }
