@@ -1,9 +1,12 @@
 package com.imageLabel.labelAnalyzeServer.service;
 
+import static com.imageLabel.labelAnalyzeServer.common.type.CaptureEventStatus.*;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
+import com.imageLabel.labelAnalyzeServer.common.type.CaptureEventStatus;
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 
 public class AnalyzeDAO {
@@ -15,6 +18,8 @@ public class AnalyzeDAO {
 		JSONArray materialList = new JSONArray();
 		JSONObject materialObject = new JSONObject();
 
+		CaptureEventStatus status = DONE;
+
 		String[] material = analyzeDto.getMaterial();
 		String[] percentage = analyzeDto.getPercent();
 
@@ -24,12 +29,17 @@ public class AnalyzeDAO {
 			materialList.put(materialObject);
 		}
 
+		jsonObject.put("eventId", analyzeDto.getEventId());
+		jsonObject.put("imageId", analyzeDto.getImageId());
+
 		jsonObject.put("ingredients", materialList);
 		jsonObject.put("waterwash" , analyzeDto.getWaterwash());
 		jsonObject.put("bleach", analyzeDto.getBleach());
 		jsonObject.put("ironing", analyzeDto.getIroning());
 		jsonObject.put("dry", analyzeDto.getDry());
 		jsonObject.put("drycleaning", analyzeDto.getDrycleaning());
+
+		jsonObject.put("status", status);
 
 		return jsonObject;
 	}

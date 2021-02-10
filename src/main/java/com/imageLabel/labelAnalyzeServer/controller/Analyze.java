@@ -13,11 +13,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
+import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
+	private String eventId, imageId;
 	private String[] material,percent;
 	private String waterwash, dry, ironing, drycleaning, bleach;
 
@@ -30,6 +32,14 @@ public class Analyze extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 
+		AnalyzeDto analyzeDto = new AnalyzeDto();
+		InfoDto infoDto = new InfoDto();
+
+		eventId = infoDto.getEventId();
+		imageId = infoDto.getImageId();
+
+		System.out.println("eventId : "+eventId+", imageId : "+imageId);
+
 		material = request.getParameterValues("material");
 		percent = request.getParameterValues("percent");
 		waterwash = request.getParameter("waterwash");
@@ -38,7 +48,9 @@ public class Analyze extends HttpServlet {
 		dry = request.getParameter("dry");
 		drycleaning = request.getParameter("drycleaning");
 
-		AnalyzeDto analyzeDto = new AnalyzeDto();
+		analyzeDto.setEventId(eventId);
+		analyzeDto.setImageId(imageId);
+
 		for(int i =0; i<material.length; i++){
 			analyzeDto.setMaterial(material);
 			analyzeDto.setPercent(percent);

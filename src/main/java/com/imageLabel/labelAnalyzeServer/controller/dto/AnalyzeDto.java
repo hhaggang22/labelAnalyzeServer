@@ -1,6 +1,8 @@
 package com.imageLabel.labelAnalyzeServer.controller.dto;
 
 public class AnalyzeDto {
+	private String eventId;
+	private String imageId;
 	private String[] material;
 	private String[] percent;
 	private String waterwash;
@@ -8,6 +10,14 @@ public class AnalyzeDto {
 	private String ironing;
 	private String dry;
 	private String drycleaning;
+
+	public String getEventId() { return eventId; }
+
+	public void setEventId(String eventId) { this.eventId = eventId; }
+
+	public String getImageId() { return imageId; }
+
+	public void setImageId(String imageId) { this.imageId = imageId; }
 
 	public String[] getMaterial() { return material; }
 

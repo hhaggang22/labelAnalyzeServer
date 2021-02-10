@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.imageLabel.labelAnalyzeServer.service.ImageRenderDAO;
 
@@ -26,10 +27,9 @@ public class ImageRendering extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 
-		JSONArray imageArray = (JSONArray)request.getAttribute("jsonResult");
-
 		ImageRenderDAO imageRenderDAO = new ImageRenderDAO();
 
+		JSONArray imageArray = (JSONArray)request.getAttribute("jsonResult");
 		ArrayList<String> imageArrayList = imageRenderDAO.getImageList(imageArray);
 
 		request.setAttribute("imageArray", imageArrayList);
