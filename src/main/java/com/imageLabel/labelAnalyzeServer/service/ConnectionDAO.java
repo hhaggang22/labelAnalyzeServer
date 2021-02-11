@@ -10,6 +10,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class ConnectionDAO {
+	//Api-Server 접속
 	private static final String requestURL = "http://localhost:8082/internal/api/capture/event?status=START";
 
 	JSONArray imageIDArray, infoArray;
@@ -28,6 +29,7 @@ public class ConnectionDAO {
 	public ConnectionDAO() throws IOException {
 	}
 
+	//imageList 만들기
 	public JSONArray getImageId(String requestURL){
 		try{
 			imageIDArray = new JSONArray();
@@ -48,6 +50,7 @@ public class ConnectionDAO {
 		return imageIDArray;
 	}
 
+	//request 정보 JSON 객체에 파싱
 	public JSONArray getInfo(String requestURL){
 		try{
 			infoArray = new JSONArray();

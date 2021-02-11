@@ -30,11 +30,14 @@ public class ResultRequest extends HttpServlet {
 		ServletException,
 		IOException {
 
-		JSONObject jsonObject = (JSONObject)request.getAttribute("jsonResult");
+		JSONObject jsonObject = (JSONObject)request.getAttribute("jsonResult");//반환할 결과 JSON
+		String putRequestUrl = (String)request.getAttribute("putReqeustURL");
 
 		ResultRequestDAO resultRequestDAO = new ResultRequestDAO();
-		resultRequestDAO.sendResult(jsonObject);
+		resultRequestDAO.sendResult(jsonObject, putRequestUrl); //Api-server에 PUT 요청
 
+		RequestDispatcher view = request.getRequestDispatcher("/connection.jsp");
+		view.forward(request, response);
 	}
 
 	@Override

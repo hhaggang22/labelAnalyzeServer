@@ -19,7 +19,7 @@ import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
-	private String eventId, imageId;
+	private String eventId, imageId, userId;
 	private String[] material,percent;
 	private String waterwash, dry, ironing, drycleaning, bleach;
 	private InfoDto infoDto;
@@ -35,12 +35,17 @@ public class Analyze extends HttpServlet {
 
 		AnalyzeDto analyzeDto = new AnalyzeDto();
 
+		//페이지카운트 세기
+		int count = infoDto.getCount();
+
 		//eventId, imageId 받아오기
 		JSONArray infoArray = infoDto.getInfoArray();
 
-		JSONObject infoObject = infoArray.getJSONObject(0);
+		//정보불러오기
+		JSONObject infoObject = infoArray.getJSONObject(count);
 		eventId = infoObject.getString("eventId");
 		imageId = infoObject.getString("imageId");
+		userId = infoObject.getString("userId");
 
 		//옷 정보 받아오기
 		material = request.getParameterValues("material");
@@ -51,7 +56,7 @@ public class Analyze extends HttpServlet {
 		dry = request.getParameter("dry");
 		drycleaning = request.getParameter("drycleaning");
 
-		//analyzeDto에 정보들 넣기
+		//analyzeDto에 정보들 넣기->반환할 결과
 		analyzeDto.setEventId(eventId);
 		analyzeDto.setImageId(imageId);
 		for(int i =0; i<material.length; i++){
@@ -64,9 +69,13 @@ public class Analyze extends HttpServlet {
 		analyzeDto.setDry(dry);
 		analyzeDto.setDrycleaning(drycleaning);
 
-		JSONObject resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
+		JSONObject resultJsonString = AnalyzeDAO.makeResult(analyzeDto); //JSON으로 Api-Server에 반환할 결과 만들기
 
+		String resultURL = "http://localhost:8082/api/user/"+userId+"/capture/event/"+eventId;
 
+		AnalyzeDAO.verify(resultURL);
+
+		request.setAttribute("putReqeustURL", resultURL);
 		request.setAttribute("jsonResult", resultJsonString);
 		RequestDispatcher view = request.getRequestDispatcher("/ResultRequest");
 		view.forward(request, response);

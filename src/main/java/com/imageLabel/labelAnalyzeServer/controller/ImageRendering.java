@@ -9,19 +9,25 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.sampled.Line;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 import com.imageLabel.labelAnalyzeServer.service.ImageRenderDAO;
 
 @WebServlet(name = "ImageRendering", value = "/ImageRendering")
 public class ImageRendering extends HttpServlet {
+	InfoDto infoDto;
+
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
 		ServletException,
 		IOException {
+
+		int count = infoDto.getCount();
 
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
@@ -29,10 +35,11 @@ public class ImageRendering extends HttpServlet {
 
 		ImageRenderDAO imageRenderDAO = new ImageRenderDAO();
 
-		JSONArray imageArray = (JSONArray)request.getAttribute("jsonResult");
-		ArrayList<String> imageArrayList = imageRenderDAO.getImageList(imageArray);
+		JSONArray imageArray = (JSONArray)request.getAttribute("jsonResult"); //이미지 리스트 불러오기
+		ArrayList<String> imageArrayList = imageRenderDAO.getImageList(imageArray); //이미지 리스트 Array로 변환
+		String imgUrl = imageArrayList.get(count);
 
-		request.setAttribute("imageArray", imageArrayList);
+		request.setAttribute("imageURL", imgUrl);
 		RequestDispatcher view = request.getRequestDispatcher("analyzePage.jsp");
 		view.forward(request, response);
 

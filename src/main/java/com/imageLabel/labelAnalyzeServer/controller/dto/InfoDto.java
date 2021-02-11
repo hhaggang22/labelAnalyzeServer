@@ -5,7 +5,7 @@ import org.json.JSONArray;
 public class InfoDto {
 
 	private static JSONArray infoArray;
-	private static int count;
+	private static int count = 0;
 
 	public InfoDto(){}
 

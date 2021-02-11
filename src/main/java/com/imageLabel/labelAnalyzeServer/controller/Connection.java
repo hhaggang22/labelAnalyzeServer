@@ -18,7 +18,6 @@ import com.imageLabel.labelAnalyzeServer.service.ConnectionDAO;
 public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String HOST_URL = "http://localhost:8082/internal/api/capture/event?status=START";
-	InfoDto infoDto;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
@@ -29,10 +28,10 @@ public class Connection extends HttpServlet {
 
 		ConnectionDAO connectionDAO = new ConnectionDAO();
 
-		JSONArray imageIdArray = connectionDAO.getImageId(HOST_URL);
-		JSONArray infoArray = connectionDAO.getInfo(HOST_URL);
+		JSONArray imageIdArray = connectionDAO.getImageId(HOST_URL); //이미지리스트
+		JSONArray infoArray = connectionDAO.getInfo(HOST_URL); //정보리스트(eventId, imageId, userId)
 
-		InfoDto.infoDto.setInfoArray(infoArray);
+		InfoDto.infoDto.setInfoArray(infoArray); //정보리스트 갖다쓰려고 infoDto에 저장
 
 		request.setAttribute("jsonResult", imageIdArray);
 		RequestDispatcher view = request.getRequestDispatcher("/ImageRendering");

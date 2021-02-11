@@ -27,7 +27,7 @@ public class AnalyzeDAO {
 			materialList.put(materialObject);
 		}
 
-		jsonObject.put("eventId", analyzeDto.getEventId());
+		//jsonObject.put("eventId", analyzeDto.getEventId());
 		jsonObject.put("imageId", analyzeDto.getImageId());
 
 		resultObject.put("ingredientList", materialList);
@@ -43,5 +43,9 @@ public class AnalyzeDAO {
 
 		return jsonObject;
 
+	}
+
+	public static void verify(String url){
+		System.out.println(url);
 	}
 }

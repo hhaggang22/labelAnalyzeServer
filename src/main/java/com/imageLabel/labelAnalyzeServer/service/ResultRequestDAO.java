@@ -12,9 +12,7 @@ import okhttp3.Response;
 
 public class ResultRequestDAO {
 
-	private static final String HOST_URL =  "http://localhost:8082//api/user/null/capture/event";
-
-	public void sendResult(JSONObject jsonObject) throws IOException {
+	public void sendResult(JSONObject jsonObject, String putRequestUrl) throws IOException {
 
 		MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 		RequestBody body = RequestBody.create(JSON, jsonObject.toString());
@@ -22,7 +20,7 @@ public class ResultRequestDAO {
 		OkHttpClient client = new OkHttpClient();
 
 		Request request = new Request.Builder()
-			.url(HOST_URL)
+			.url(putRequestUrl)
 			.put(body)
 			.build();
 
