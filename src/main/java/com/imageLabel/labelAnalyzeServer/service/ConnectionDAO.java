@@ -1,33 +1,36 @@
 package com.imageLabel.labelAnalyzeServer.service;
 
+import java.io.IOException;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 public class ConnectionDAO {
+	private static final String requestURL = "http://localhost:8082/internal/api/capture/event?status=START";
+
 	JSONArray imageIDArray, infoArray;
 	JSONObject imageIDObject, infoObject;
-	InfoDto infoDto = new InfoDto();
+
+	OkHttpClient client = new OkHttpClient();
+	Request request = new Request.Builder()
+		.url(requestURL)
+		.build();
+
+	Response response = client.newCall(request).execute();
+	JSONArray jsonArray= new JSONArray(response.body().string());
+
+	int count = jsonArray.length();
+
+	public ConnectionDAO() throws IOException {
+	}
 
 	public JSONArray getImageId(String requestURL){
 		try{
-			OkHttpClient client = new OkHttpClient();
-			Request request = new Request.Builder()
-				.url(requestURL)
-				.build();
-
-			Response response = client.newCall(request).execute();
-			JSONArray jsonArray= new JSONArray(response.body().string());
-
 			imageIDArray = new JSONArray();
-
-			int count = jsonArray.length();
 
 			for(int i = 0; i < count; i++){
 				imageIDObject = new JSONObject();
@@ -35,8 +38,6 @@ public class ConnectionDAO {
 
 				if(jsonObject.getString("status").equals("START")){
 					imageIDObject.put("imageId", jsonObject.getString("imageId"));
-					infoDto.setEventId(jsonObject.getString("eventId"));
-					infoDto.setImageId(jsonObject.getString("imageId"));
 				}
 				imageIDArray.put(imageIDObject);
 			}
@@ -47,17 +48,10 @@ public class ConnectionDAO {
 		return imageIDArray;
 	}
 
-	public JSONObject getInfo(String requestURL){
+	public JSONArray getInfo(String requestURL){
 		try{
-			OkHttpClient client = new OkHttpClient();
-			Request request = new Request.Builder()
-				.url(requestURL)
-				.build();
+			infoArray = new JSONArray();
 
-			Response response = client.newCall(request).execute();
-			JSONArray jsonArray= new JSONArray(response.body().string());
-
-			int count = jsonArray.length();
 
 			for(int i=0; i< count; i++){
 				infoObject = new JSONObject();
@@ -66,13 +60,19 @@ public class ConnectionDAO {
 				if(jsonObject.getString("status").equals("START")){
 					infoObject.put("eventId", jsonObject.getString("eventId"));
 					infoObject.put("imageId", jsonObject.getString("imageId"));
+					infoObject.put("userId", jsonObject.getString("userId"));
 				}
+				infoArray.put(infoObject);
+			}
+
+			for(int k=0;k<infoArray.length();k++){
+				System.out.println(infoArray.get(k));
 			}
 
 		}catch (Exception e){
 			System.err.println(e.toString());
 		}
 
-		return infoObject;
+		return infoArray;
 	}
 }

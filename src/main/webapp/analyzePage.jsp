@@ -1,4 +1,5 @@
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="org.json.JSONArray" %><%--
   Created by IntelliJ IDEA.
   User: kimhakeyong
   Date: 2021/01/20
@@ -76,16 +77,16 @@
     <div class = "imageSelect">
         <h2> 이미지를 업로드하고 해당 라벨에 있는 정보를 입력하세요. </h2>
         <!--<input type="file" id="image" accept="image/*" onchange="setImage(event);"/>-->
-<%
-    ArrayList<String> imageUrlList = (ArrayList<String>)request.getAttribute("imageArray");
-    for(int i=0; i< imageUrlList.size(); i++){
-    	String imageUrl = imageUrlList.get(i);
-%>
-        <img src = <%= imageUrl%>/>
-<%
-    }
+        <%
+            ArrayList<String> imageUrlList = (ArrayList<String>)request.getAttribute("imageArray");
+            for(int i=0; i< imageUrlList.size(); i++){
+                String imageUrl = imageUrlList.get(i);
+        %>
+        <img src = <%=imageUrl%> />
+        <%
+            }
 
-%>
+        %>
     </div>
 
     <!--옷 재질 및 함유량 추가-->

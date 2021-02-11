@@ -5,15 +5,13 @@ import static com.imageLabel.labelAnalyzeServer.common.type.CaptureEventStatus.*
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.google.gson.Gson;
 import com.imageLabel.labelAnalyzeServer.common.type.CaptureEventStatus;
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 
 public class AnalyzeDAO {
 
 	public static JSONObject makeResult(AnalyzeDto analyzeDto){
-		Gson gson = new Gson();
-		//JSONArray jsonList = new JSONArray();
+		JSONObject resultObject = new JSONObject();
 		JSONObject jsonObject = new JSONObject();
 		JSONArray materialList = new JSONArray();
 		JSONObject materialObject = new JSONObject();
@@ -32,15 +30,18 @@ public class AnalyzeDAO {
 		jsonObject.put("eventId", analyzeDto.getEventId());
 		jsonObject.put("imageId", analyzeDto.getImageId());
 
-		jsonObject.put("ingredients", materialList);
-		jsonObject.put("waterwash" , analyzeDto.getWaterwash());
-		jsonObject.put("bleach", analyzeDto.getBleach());
-		jsonObject.put("ironing", analyzeDto.getIroning());
-		jsonObject.put("dry", analyzeDto.getDry());
-		jsonObject.put("drycleaning", analyzeDto.getDrycleaning());
+		resultObject.put("ingredientList", materialList);
+		resultObject.put("waterType" , analyzeDto.getWaterwash());
+		resultObject.put("bleachType", analyzeDto.getBleach());
+		resultObject.put("ironingType", analyzeDto.getIroning());
+		resultObject.put("dryType", analyzeDto.getDry());
+		resultObject.put("dryCleaning", analyzeDto.getDrycleaning());
+
+		jsonObject.put("result", resultObject);
 
 		jsonObject.put("status", status);
 
 		return jsonObject;
+
 	}
 }

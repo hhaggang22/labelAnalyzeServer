@@ -1,34 +1,26 @@
 package com.imageLabel.labelAnalyzeServer.controller.dto;
 
-import com.imageLabel.labelAnalyzeServer.common.type.CaptureEventStatus;
+import org.json.JSONArray;
 
 public class InfoDto {
-	String eventId;
-	String imageId;
-	CaptureEventStatus status;
 
-	public String getEventId() {
-		return eventId;
+	private static JSONArray infoArray;
+	private static int count;
+
+	public InfoDto(){}
+
+	public static final InfoDto infoDto = new InfoDto();
+
+	public static JSONArray getInfoArray() {
+		return infoArray;
 	}
 
-	public void setEventId(String eventId) {
-		this.eventId = eventId;
-	}
+	public void setInfoArray(JSONArray jsonArray){this.infoArray = jsonArray;}
 
-	public String getImageId() {
-		return imageId;
-	}
+	public static int getCount(){ return count; }
 
-	public void setImageId(String imageId) {
-		this.imageId = imageId;
-	}
+	public void setCount(int count){ this.count = count; }
 
-	public CaptureEventStatus getStatus() {
-		return status;
-	}
 
-	public void setStatus(CaptureEventStatus status) {
-		this.status = status;
-	}
 
 }
