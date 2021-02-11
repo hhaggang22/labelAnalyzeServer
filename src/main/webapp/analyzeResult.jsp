@@ -17,5 +17,9 @@
         <%= request.getAttribute("jsonResult")%>
     </div>
 
+    <div>
+        <%= request.getAttribute("infoArray")%>
+    </div>
+
     </body>
 </html>

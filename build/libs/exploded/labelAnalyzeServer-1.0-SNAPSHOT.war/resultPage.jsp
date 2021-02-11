@@ -13,7 +13,7 @@
 <body>
 
     <div>
-        <%= request.getAttribute("jsonResult")%>
+        <%= request.getAttribute("imageArray")%>
     </div>
 
 </body>

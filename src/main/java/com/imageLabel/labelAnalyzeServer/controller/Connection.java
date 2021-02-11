@@ -1,7 +1,6 @@
 package com.imageLabel.labelAnalyzeServer.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,12 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
 
+import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 import com.imageLabel.labelAnalyzeServer.service.ConnectionDAO;
 
 @WebServlet(name = "Connection", value = "/Connection")
 public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String HOST_URL = "http://localhost:8082/capture/event?status=START";
+	private static final String HOST_URL = "http://localhost:8082/internal/api/capture/event?status=START";
+	InfoDto infoDto;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
@@ -27,10 +28,13 @@ public class Connection extends HttpServlet {
 		response.setContentType("application/json;charset=utf-8");
 
 		ConnectionDAO connectionDAO = new ConnectionDAO();
-		JSONArray responseJson = connectionDAO.get(HOST_URL);
 
+		JSONArray imageIdArray = connectionDAO.getImageId(HOST_URL);
+		JSONArray infoArray = connectionDAO.getInfo(HOST_URL);
 
-		request.setAttribute("jsonResult", responseJson);
+		InfoDto.infoDto.setInfoArray(infoArray);
+
+		request.setAttribute("jsonResult", imageIdArray);
 		RequestDispatcher view = request.getRequestDispatcher("/ImageRendering");
 		view.forward(request, response);
 

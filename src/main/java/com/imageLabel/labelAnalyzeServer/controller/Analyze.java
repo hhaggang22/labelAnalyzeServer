@@ -13,13 +13,16 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
+import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 import com.imageLabel.labelAnalyzeServer.service.AnalyzeDAO;
 
 
 @WebServlet(name = "Analyze", value = "/Analyze")
 public class Analyze extends HttpServlet {
+	private String eventId, imageId;
 	private String[] material,percent;
 	private String waterwash, dry, ironing, drycleaning, bleach;
+	private InfoDto infoDto;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
@@ -30,6 +33,16 @@ public class Analyze extends HttpServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 
+		AnalyzeDto analyzeDto = new AnalyzeDto();
+
+		//eventId, imageId 받아오기
+		JSONArray infoArray = infoDto.getInfoArray();
+
+		JSONObject infoObject = infoArray.getJSONObject(0);
+		eventId = infoObject.getString("eventId");
+		imageId = infoObject.getString("imageId");
+
+		//옷 정보 받아오기
 		material = request.getParameterValues("material");
 		percent = request.getParameterValues("percent");
 		waterwash = request.getParameter("waterwash");
@@ -38,7 +51,9 @@ public class Analyze extends HttpServlet {
 		dry = request.getParameter("dry");
 		drycleaning = request.getParameter("drycleaning");
 
-		AnalyzeDto analyzeDto = new AnalyzeDto();
+		//analyzeDto에 정보들 넣기
+		analyzeDto.setEventId(eventId);
+		analyzeDto.setImageId(imageId);
 		for(int i =0; i<material.length; i++){
 			analyzeDto.setMaterial(material);
 			analyzeDto.setPercent(percent);
@@ -51,11 +66,10 @@ public class Analyze extends HttpServlet {
 
 		JSONObject resultJsonString = AnalyzeDAO.makeResult(analyzeDto);
 
-		request.setAttribute("jsonResult", resultJsonString);
-		RequestDispatcher view = request.getRequestDispatcher("analyzeResult.jsp");
-		view.forward(request, response);
 
-		//System.out.println(resultJsonString);
+		request.setAttribute("jsonResult", resultJsonString);
+		RequestDispatcher view = request.getRequestDispatcher("/ResultRequest");
+		view.forward(request, response);
 
 	}
 
