@@ -1,6 +1,7 @@
 package com.imageLabel.labelAnalyzeServer.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,15 +28,26 @@ public class Connection extends HttpServlet {
 		response.setContentType("application/json;charset=utf-8");
 
 		ConnectionDAO connectionDAO = new ConnectionDAO();
+		PrintWriter out = response.getWriter();
 
 		JSONArray imageIdArray = connectionDAO.getImageId(HOST_URL); //이미지리스트
-		JSONArray infoArray = connectionDAO.getInfo(HOST_URL); //정보리스트(eventId, imageId, userId)
 
-		InfoDto.infoDto.setInfoArray(infoArray); //정보리스트 갖다쓰려고 infoDto에 저장
+		if(imageIdArray!=null){
+			JSONArray infoArray = connectionDAO.getInfo(HOST_URL); //정보리스트(eventId, imageId, userId)
+			InfoDto.infoDto.setInfoArray(infoArray); //정보리스트 갖다쓰려고 infoDto에 저장
 
-		request.setAttribute("jsonResult", imageIdArray);
-		RequestDispatcher view = request.getRequestDispatcher("/ImageRendering");
-		view.forward(request, response);
+			request.setAttribute("jsonResult", imageIdArray);
+			RequestDispatcher view = request.getRequestDispatcher("/ImageRendering");
+			view.forward(request, response);
+		}else{
+			RequestDispatcher view = request.getRequestDispatcher("connection.jsp");
+			view.forward(request, response);
+		}
+
+
+
+
+
 
 	}
 

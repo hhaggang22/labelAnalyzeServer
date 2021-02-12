@@ -34,15 +34,19 @@ public class ConnectionDAO {
 		try{
 			imageIDArray = new JSONArray();
 
-			for(int i = 0; i < count; i++){
-				imageIDObject = new JSONObject();
-				JSONObject jsonObject = jsonArray.getJSONObject(i);
+			if(count != 0){
+				for(int i = 0; i < count; i++){
+					imageIDObject = new JSONObject();
+					JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-				if(jsonObject.getString("status").equals("START")){
-					imageIDObject.put("imageId", jsonObject.getString("imageId"));
+					if(jsonObject.getString("status").equals("START")){
+						imageIDObject.put("imageId", jsonObject.getString("imageId"));
+					}
+					imageIDArray.put(imageIDObject);
 				}
-				imageIDArray.put(imageIDObject);
 			}
+			else return null;
+
 
 		}catch (Exception e){
 			System.err.println(e.toString());
