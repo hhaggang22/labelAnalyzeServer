@@ -11,7 +11,7 @@ import okhttp3.Response;
 
 public class ConnectionDAO {
 	//Api-Server 접속
-	private static final String requestURL = "http://localhost:8082/internal/api/capture/event?status=START";
+	private static final String requestURL = "http://ec2-13-209-47-146.ap-northeast-2.compute.amazonaws.com:8082/internal/api/capture/event?status=START";
 
 	JSONArray imageIDArray, infoArray;
 	JSONObject imageIDObject, infoObject;

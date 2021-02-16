@@ -10,18 +10,19 @@ import com.imageLabel.labelAnalyzeServer.controller.dto.AnalyzeDto;
 
 public class AnalyzeDAO {
 
-	public static JSONObject makeResult(AnalyzeDto analyzeDto){
+	public static JSONObject makeResult(AnalyzeDto analyzeDto) {
 		JSONObject resultObject = new JSONObject();
 		JSONObject jsonObject = new JSONObject();
 		JSONArray materialList = new JSONArray();
-		JSONObject materialObject = new JSONObject();
 
-		CaptureEventStatus status = DONE;
+		CaptureEventStatus status = EXTRACT;
 
 		String[] material = analyzeDto.getMaterial();
 		String[] percentage = analyzeDto.getPercent();
 
-		for(int i=0; i<material.length; i++){
+		for (int i = 0; i < material.length; i++) {
+			JSONObject materialObject = new JSONObject();
+
 			materialObject.put("name", material[i]);
 			materialObject.put("percentage", percentage[i]);
 			materialList.put(materialObject);
@@ -31,7 +32,7 @@ public class AnalyzeDAO {
 		jsonObject.put("imageId", analyzeDto.getImageId());
 
 		resultObject.put("ingredientList", materialList);
-		resultObject.put("waterType" , analyzeDto.getWaterwash());
+		resultObject.put("waterType", analyzeDto.getWaterwash());
 		resultObject.put("bleachType", analyzeDto.getBleach());
 		resultObject.put("ironingType", analyzeDto.getIroning());
 		resultObject.put("dryType", analyzeDto.getDry());
@@ -45,7 +46,7 @@ public class AnalyzeDAO {
 
 	}
 
-	public static void verify(String url){
+	public static void verify(String url) {
 		System.out.println(url);
 	}
 }

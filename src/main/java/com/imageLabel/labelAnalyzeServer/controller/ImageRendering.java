@@ -9,10 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sound.sampled.Line;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import com.imageLabel.labelAnalyzeServer.controller.dto.InfoDto;
 import com.imageLabel.labelAnalyzeServer.service.ImageRenderDAO;

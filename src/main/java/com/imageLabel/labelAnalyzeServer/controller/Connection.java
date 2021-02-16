@@ -18,7 +18,7 @@ import com.imageLabel.labelAnalyzeServer.service.ConnectionDAO;
 @WebServlet(name = "Connection", value = "/Connection")
 public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String HOST_URL = "http://localhost:8082/internal/api/capture/event?status=START";
+	private static final String HOST_URL = "http://ec2-13-209-47-146.ap-northeast-2.compute.amazonaws.com:8082/internal/api/capture/event?status=START";
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws

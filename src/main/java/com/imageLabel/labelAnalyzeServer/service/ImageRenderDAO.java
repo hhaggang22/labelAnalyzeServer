@@ -12,7 +12,7 @@ public class ImageRenderDAO {
 
 		for(int i = 0 ; i<jsonArray.length(); i++){
 			JSONObject imageId = (JSONObject)jsonArray.get(i);
-			String imgIdUrl = "http://localhost:8081/user/null/image/"+imageId.getString("imageId");
+			String imgIdUrl = "http://ec2-3-139-60-119.us-east-2.compute.amazonaws.com:8081/user/null/image/"+imageId.getString("imageId");
 			imageUrl.add(imgIdUrl);
 		}
 

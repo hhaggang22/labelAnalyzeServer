@@ -56,13 +56,16 @@ public class Analyze extends HttpServlet {
 		dry = request.getParameter("dry");
 		drycleaning = request.getParameter("drycleaning");
 
+
+
 		//analyzeDto에 정보들 넣기->반환할 결과
 		analyzeDto.setEventId(eventId);
 		analyzeDto.setImageId(imageId);
-		for(int i =0; i<material.length; i++){
-			analyzeDto.setMaterial(material);
-			analyzeDto.setPercent(percent);
-		}
+
+
+		analyzeDto.setMaterial(material);
+		analyzeDto.setPercent(percent);
+
 		analyzeDto.setWaterwash(waterwash);
 		analyzeDto.setBleach(bleach);
 		analyzeDto.setIroning(ironing);
@@ -71,7 +74,7 @@ public class Analyze extends HttpServlet {
 
 		JSONObject resultJsonString = AnalyzeDAO.makeResult(analyzeDto); //JSON으로 Api-Server에 반환할 결과 만들기
 
-		String resultURL = "http://localhost:8082/api/user/"+userId+"/capture/event/"+eventId;
+		String resultURL = "http://ec2-13-209-47-146.ap-northeast-2.compute.amazonaws.com:8082/api/user/"+userId+"/capture/event/"+eventId;
 
 		AnalyzeDAO.verify(resultURL);
 

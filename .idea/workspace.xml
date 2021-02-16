@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Gradle : com.imageLabel : labelAnalyzeServer-1.0-SNAPSHOT.war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7dd7dda-b2f9-4a8b-968c-708d00b024e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/labelAnalyzeServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/labelAnalyzeServer.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/common/type/CaptureEventStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/Analyze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/Connection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/ImageRendering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/ResultRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/dto/AnalyzeDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/controller/dto/InfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/service/AnalyzeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/service/ConnectionDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/service/ImageRenderDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/classes/com/imageLabel/labelAnalyzeServer/service/ResultRequestDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/annotations-13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/json-20201115.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/kotlin-stdlib-1.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/kotlin-stdlib-common-1.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/kotlin-stdlib-jdk7-1.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/kotlin-stdlib-jdk8-1.4.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/logging-interceptor-4.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/okhttp-4.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/lib/okio-jvm-2.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/analyzePage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/analyzeResult.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/connection.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/allno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/ame_allbleach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/ame_half.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/ame_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/jap_can.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/jap_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/sp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/spno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/yp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/ypno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/bleach/ysp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_gloomy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_nomachine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_roap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/ame_wetroap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/hang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/hangsun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/jap_hang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/jap_hanggloomy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/jap_lay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/jap_laygloomy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/lay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/laysun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/nomachine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/nosqueeze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/dry/squeeze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/ame_drycleaning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/ame_lowheat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/ame_lowmoi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/ame_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/ame_short.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/can.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/half.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/jap_can.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/jap_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/drycleaning/noself.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/180210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/ame_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/ame_steam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/ame_steamno.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/jap_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/jap_to140160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/jap_to180210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/jap_to80120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/to140160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/to80120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/withcloth140160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/withcloth180210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/ironing/withcloth80120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/ame_handwash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/ame_mac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/ame_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/ame_nosqueeze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/handwash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/jap_30hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/jap_95mac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/jap_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/jap_no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/jap_nosqueeze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/machine40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/machine60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/machine95.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/machine_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/machine_40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/img/waterwash/nohandwash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/labelAnalyzeServer-1.0-SNAPSHOT.war/resultPage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/labelAnalyzeServer-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/labelAnalyzeServer-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/imageLabel/labelAnalyzeServer/controller/ResultRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/imageLabel/labelAnalyzeServer/controller/ResultRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/Analyze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/Analyze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/ImageRendering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/ImageRendering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/ResultRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/controller/ResultRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/AnalyzeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/AnalyzeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/ConnectionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/ConnectionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/ImageRenderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imageLabel/labelAnalyzeServer/service/ImageRenderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/json-20201115.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="labelAnalyzeServer" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="labelAnalyzeServer" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="labelAnalyzeServer" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="labelAnalyzeServer" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1nJsXsVswTAhfWLfH5MDEkbhEym" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.17126437" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Gson" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imageLabel.labelAnalyzeServer.controller" />
+      <recent name="com.imageLabel.labelAnalyzeServer" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.61">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="labelAnalyzeServer" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.61" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.imageLabel : labelAnalyzeServer-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="bf905eb2-14e1-466d-9da7-dcd2af8762ad" />
+        <option name="HTTP_PORT" value="8099" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61793" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.imageLabel : labelAnalyzeServer-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.labelAnalyzeServer" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.61" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7dd7dda-b2f9-4a8b-968c-708d00b024e8" name="Default Changelist" comment="" />
+      <created>1611119571096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611119571096</updated>
+      <workItem from="1611119572510" duration="169000" />
+      <workItem from="1611119746769" duration="489000" />
+      <workItem from="1611124988742" duration="1032000" />
+      <workItem from="1611126087839" duration="4986000" />
+      <workItem from="1611494656121" duration="1116000" />
+      <workItem from="1611604972041" duration="406000" />
+      <workItem from="1611813392695" duration="14320000" />
+      <workItem from="1611841253890" duration="5311000" />
+      <workItem from="1611947296278" duration="17451000" />
+      <workItem from="1612358023081" duration="3652000" />
+      <workItem from="1612966083446" duration="37177000" />
+      <workItem from="1613330910812" duration="722000" />
+      <workItem from="1613331658563" duration="462000" />
+      <workItem from="1613347494357" duration="22000" />
+      <workItem from="1613347555364" duration="479000" />
+      <workItem from="1613348056962" duration="355000" />
+      <workItem from="1613348433202" duration="98000" />
+      <workItem from="1613481695196" duration="1078000" />
+      <workItem from="1613482797295" duration="3395000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
